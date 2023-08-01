@@ -95,6 +95,14 @@ ORDER BY cost DESC;
 * Hány államban történt baleset?
 * A hét melyik napján történt a legnagyobb kár?
 
+* How many dollars was the most damage?
+* ^In what state did this happen and what kind of bird caused it?
+* Which are the first three states in ABC order?
+* What size birds are in the database?
+* What size bird caused the most damage in Missouri?
+* In how many states did the accident occur?
+* On which day of the week did the greatest damage occur?
+
 ## SOME more DML
 
 Updating
@@ -166,6 +174,13 @@ GROUP BY state HAVING COUNT(*) > 100;
  * Írasd ki madár és állam-méretenként (tehát 2 mezőn együttesen csoportosítva) a legnagyobb kár értékét.
  * ^^ Ebből irasd ki az átlagos kárt azokban az állam/méret csoportokban, ahol több, mint 1000 baleset történt
 
+* Again: In how many states did the accident occur? (Now the result should be a number on the screen)
+* In which state did the most total damage occur?
+* On average, what size bird does how much damage?
+* Write out the value of the largest damage per bird and state size (ie grouped together in 2 fields).
+* ^^ From this, write down the average damage in the states/size groups where more than 1000 accidents occurred
+
+
 ## JOINING
 ```
 SELECT * FROM emberek
@@ -204,8 +219,11 @@ ALTER TABLE birdstrikes_denorm DROP state;
 ## WORKSHOP
  * Újra: Hány államban történtek balesetek?
  * Nézd meg, hogy hány sort látunk a különböző joinoknál a táblában (INNER, LEFT, RIGHT, FULL OUTER)
+ 
+* Again: In how many states were there accidents?
+* See how many rows we see for the different joins in the table (INNER, LEFT, RIGHT, FULL OUTER)
 
-### Zeppelin
+### Using Zeppelin Notebook
 ```
 %psql.sql SELECT EXTRACT(dow FROM flight_date) as week, COUNT(*) FROM birdstrikes GROUP BY week;
 ```

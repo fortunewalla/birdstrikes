@@ -1,0 +1,1 @@
+COPY states FROM '/home/smalldata/anyagok/states.csv' DELIMITER ';' CSV;
