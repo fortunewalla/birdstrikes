@@ -103,6 +103,12 @@ ORDER BY cost DESC;
 * In how many states did the accident occur?
 * On which day of the week did the greatest damage occur?
 
+* What's the maximum overall cost
+* ^^ In which state did this accident happen?
+* Display the first three states in alphabetical order?
+* Display the bird sizes (don't display the "empty" cell)
+* What is the size of the bird that caused the biggest damage in Missouri?
+
 ## SOME more DML
 
 Updating
@@ -180,6 +186,10 @@ GROUP BY state HAVING COUNT(*) > 100;
 * Write out the value of the largest damage per bird and state size (ie grouped together in 2 fields).
 * ^^ From this, write down the average damage in the states/size groups where more than 1000 accidents occurred
 
+ * Which is the state with the most accidents?
+ * List the average (AVG) damage caused by each bird size?
+ * List the maximum (MAX) damage caused by each bird size in each state.
+ * ^^ Only show those rows from the above solutions which have a bigger damage than $100000
 
 ## JOINING
 ```
